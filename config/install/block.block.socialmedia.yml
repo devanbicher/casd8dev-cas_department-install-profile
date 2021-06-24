@@ -6,9 +6,9 @@ dependencies:
   module:
     - menu_block
   theme:
-    - layout_theme
+    - cas_base
 id: socialmedia
-theme: layout_theme
+theme: cas_base
 region: footer
 weight: -4
 provider: null

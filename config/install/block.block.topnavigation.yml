@@ -7,9 +7,9 @@ dependencies:
   module:
     - menu_block
   theme:
-    - layout_theme
+    - cas_base
 id: topnavigation
-theme: layout_theme
+theme: cas_base
 region: header
 weight: -7
 provider: null

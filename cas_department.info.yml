@@ -1,0 +1,92 @@
+name: CAS Department Install Profile
+type: profile
+description: 'Standard CAS Department Install Profile'
+core_version_requirement: '^8.8 || ^9'
+#version: 9
+
+## This didn't work. 
+#distribution:
+#  name:  Profile Distribution
+#  install:
+#    theme: cas_base
+
+
+install:
+  - node
+  - history
+  - block
+  - breakpoint
+  - ckeditor
+  - color
+  - config
+  - contextual
+  - contact
+  - menu_link_content
+  - datetime
+  - block_content
+  - quickedit
+  - editor
+  - help
+  - image
+  - menu_ui
+  - options
+  - path
+  - page_cache
+  - dynamic_page_cache
+  - big_pipe
+  - taxonomy
+  - dblog
+  - search
+  - shortcut
+  - toolbar
+  - field_ui
+  - field_group
+  - file
+  - rdf
+  - views
+  - views_ui
+  - tour
+  - automated_cron
+  - ctools
+  - pathauto
+  - admin_toolbar
+  - admin_toolbar_tools
+  - token
+  - components
+  - ldap_servers
+  - externalauth
+  - ldap_user
+  - ldap_query
+  - ldap_authentication
+  - menu_item_extras
+  #paragraphs
+  - paragraphs
+  - paragraphs_type_permissions
+  - paragraphs_ee
+  - paragraphs_features
+  - permissions_filter
+  - media
+  - media_library
+  - blockgroup
+  - easy_breadcrumb
+  - emulsify_twig
+  - menu_block
+  - telephone
+  - address
+  - svg_image
+  - login_history
+  - responsive_image
+  - entity_browser
+  - entity_embed
+  - file_browser
+  #not sure if these will stay in the final, non-development site deployment
+  - config_update_ui
+  - config_update
+  # Development modules past here
+  - twig_vardumper
+  - devel
+
+themes:
+  - cas_base
+  - seven
+  - claro

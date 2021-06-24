@@ -1,0 +1,312 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the standard installation profile.
+ */
+
+use Drupal\user\Entity\User;
+use Drupal\shortcut\Entity\Shortcut;
+use Drupal\node\Entity\Node;
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+use Drupal\menu_item_extras\Entity\MenuItemExtrasMenuLinkContent;
+use Drupal\block\Entity\Block;
+use Drupal\block_content\Entity\BlockContent;
+use Drupal\file\Entity\File;
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+function cas_department_install() {
+  // Assign user 1 the "administrator" role.
+  $user = User::load(1);
+  $user->roles[] = 'administrator';
+  $user->save();
+
+  //update ldap settings. 
+  // There might be a better, or preffered way to do this. not sure.
+  $updateldap =  \Drupal::configFactory()->getEditable('ldap_authentication.settings');
+  $updateldap->set('sids', ['nis_lehigh'=>'nis_lehigh']);
+  $updateldap->set('authenticationMode','exclusive');
+  $updateldap->set('skipAdministrators',FALSE);
+  $updateldap->save(TRUE);
+  //update config for easy_breadcrumb
+  $updateconfig = \Drupal::configFactory()->getEditable('easy_breadcrumb.settings');
+  $updateconfig->set('home_segment_keep',TRUE);
+  $updateconfig->set('include_invalid_paths',TRUE);
+  $updateconfig->set('truncator_mode',TRUE);
+  $updateconfig->set('truncator_length',40);
+  $updateconfig->save(TRUE);
+
+  //add Devan and Travis
+  $dlb213 = User::create([
+    'name' => 'dlb213',
+    'pass' => '',
+  ]);
+  $dlb213 ->roles[]='administrator';
+  $dlb213 ->activate();
+  $dlb213->save();
+
+  $taw219 = User::create([
+    'name' => 'taw219',
+    'pass' => '',
+  ]);
+  $taw219 ->roles[] = 'administrator';
+  $taw219->activate();
+  $taw219 ->save();
+
+//might as well add Rob and Chris.
+$ron305 = User::create([
+  'name' => 'ron305',
+  'pass' => '',
+]);
+$ron305 ->roles[]='administrator';
+$ron305 ->activate();
+$ron305->save();
+
+$cah213 = User::create([
+  'name' => 'cah213',
+  'pass' => '',
+]);
+$cah213 ->roles[] = 'administrator';
+$cah213->activate();
+$cah213 ->save();
+
+  // Populate the default shortcut set.
+  $shortcut = Shortcut::create([
+    'shortcut_set' => 'default',
+    'title' => t('Add content'),
+    'weight' => -20,
+    'link' => ['uri' => 'internal:/node/add'],
+  ]);
+  $shortcut->save();
+
+  $shortcut = Shortcut::create([
+    'shortcut_set' => 'default',
+    'title' => t('All content'),
+    'weight' => -19,
+    'link' => ['uri' => 'internal:/admin/content'],
+  ]);
+  $shortcut->save();
+
+  /////////////////////////////////////////////
+  //
+  //  CREATE STANDARD BASIC PAGES and put them in the menus
+  //
+  ////////////////////////////////////////////
+  
+  // Welcome
+  $welcome = Node::create([
+    'type' => 'page',
+    'title' => 'Welcome to Your New Website'
+  ]);
+  $welcome->set('body', ['value'=>'<h2>Some Important information should go here</h2><p>It is probably a good idea to find a nice methodology later to have this text be pulled in from like a text file.  Then maybe that text file could be editable from GOGS by Rob or something like that</p>
+  <h4>SOME IMPORTANT NOTES:</h4><ul>
+  
+  <li><h2>DEVAN:</h2><p>Setup the LEHIGH Favicon</p>
+  <li> Get some content for this page and the standard landing pages for subsequent sites</li>
+  </ul>
+  <p><strong> Here is out confluence space, include this in the initial website in the future, once its done</strong></p>
+  <p> https://confluence.cc.lehigh.edu/display/CASDEAN/Welcome+to+the+College+of+Arts+and+Sciences </p> 
+  ',
+                'format'=>'full_html',]);
+  //set the user as admin, just for these initial pages.
+  $welcome->setOwnerId(1);
+  $welcome->enforceIsNew();
+  $welcome->save();
+
+
+   ///// Graduate //////
+   $grad_node = Node::create([
+    'type' => 'page',
+    'title' => 'Graduate Page'
+  ]);
+  $grad_node->set('body', ['value'=>'<h3>Here is some example text for a graduate page from EES.<h3> <p> The EES Department offers a graduate program linked to nationally prominent research in key areas of Earth & Environmental Science. Our internationally recognized faculty work closely with students on their research projects and offer engaging and cutting-edge graduate courses. Active research discussion groups, weekly departmental lunches and seminars, and an annual graduate student research symposium all facilitate broad discussion, collaboration, and a dynamic intellectual environment.</p>',
+                  'format'=>'full_html',]);
+  //set the user as admin, just for these initial pages.
+  $grad_node->setOwnerId(1);
+  $grad_node->enforceIsNew();
+  $grad_node->save();
+  //place GRADUATE page in the main menu
+  $grad_link = MenuLinkContent::create([
+    'title' => 'Graduate',
+    'link' => ['uri' => 'entity:node/'.$grad_node->id()],
+    'menu_name' => 'main',
+    'expanded' => TRUE,
+  ]);
+  $grad_link->save();
+  /// top menu
+  $grad_link = MenuLinkContent::create([
+    'title' => 'Graduate',
+    'link' => ['uri' => 'internal:/node/'.$grad_node->id()],
+    'menu_name' => 'top',
+    'expanded' => TRUE,
+  ]);
+  $grad_link->save();
+  
+
+  //////  Undergraduate   //////
+   $undergraduate= Node::create([
+    'type' => 'page',
+    'title' => 'Undergraduate'
+  ]);
+  $undergraduate->set('body', ['value'=>'<h3>Example Undergraduate page from Physics</h3><p>The Department of Physics provides students with strong interests in physics and related sciences with faculty keenly interested in fostering their growth through courses, research opportunities, and individual interactions.  Educational programs in basic and applied physics can be tailored easily to suit a student’s individual interests and needs.</p>
+      <p>Lehigh offers the following undergraduate degrees in physics, astrophysics, and astronomy: the Bachelor of Science in Physics, the Bachelor of Arts with a major in Physics in the College of Arts and Sciences, theBachelor of Science in Engineering Physics in the College of Engineering and Applied Science, the Bachelor of Arts with a major in Astronomy in the College of Arts and Sciences, and the Bachelor of Science in Astrophysics. The first three of these share a common core of physics and mathematics courses, students can defer choosing from among them until after the first year, and changes can be made rather easily even later.</p>',
+                      'format'=>'full_html',]);
+  //set the user as admin, just for these initial pages.
+  $undergraduate->setOwnerId(1);
+  $undergraduate->enforceIsNew();
+  $undergraduate->save();
+  //place this page in the main menu
+  $undergrad_link = MenuLinkContent::create([
+    'title' => 'Undergraduate',
+    'link' => ['uri' => 'entity:node/'.$undergraduate->id()],
+    'menu_name' => 'main',
+    'expanded' => TRUE,
+  ]);
+  $undergrad_link->save();
+  $undergrad_main_menu_id=$undergrad_link->uuid();
+  //undergrad menu
+  $undergrad_link = MenuLinkContent::create([
+    'title' => 'Undergraduate',
+    'link' => ['uri' => 'internal:/node/'.$undergraduate->id()],
+    'menu_name' => 'top',
+    'expanded' => TRUE,
+  ]);
+  $undergrad_link->save();
+
+
+   ////// Majors and Minors //////
+  $maj_min = Node::create([
+    'type' => 'page',
+    'title' => 'Majors and Minors'
+  ]);
+  $maj_min->set('body', ['value'=>'<h3>example Majors and Minors Snippet from Journalism</h3><p>The Department of Journalism and Communication offers major and minor programs in journalism and science and environmental writing, and a minor in mass communication.</p>
+      <p>Journalism is crucial to the public life of a democracy. At its best, journalism serves as a watchdog to government, offers a voice for the powerless at home and abroad, entertains and instructs the public, represents the views of varied constituencies, monitors and protects the environment and public resources, and provides a common memory for a people.</p>
+      <p>The purpose of the journalism major is to provide students with the knowledge and skills to fulfill such roles. The program emphasizes research, writing, editing, and critical thinking and analysis. Students integrate online technology with legal and ethical thinking and a global perspective that will prepare them for numerous opportunities in and out of journalism. In the journalism major, students take courses in writing, editing, visual literacy, law and ethics, a professional internship, and varied courses in the relationship of the media with society.</p>',
+                'format'=>'full_html',]);
+  //set the user as admin, just for these initial pages.
+  $maj_min->setOwnerId(1);
+  $maj_min->enforceIsNew();
+  $maj_min->save();
+  //place the page in a menu
+  $majmin_menu = MenuLinkContent::create([
+    'title' => 'Majors & Minors',
+    'link' => ['uri' => 'entity:node/'.$maj_min->id()],
+    'menu_name' => 'main',
+    'expanded' => TRUE,
+    'parent' => 'menu_link_content:'.$undergrad_main_menu_id,
+  ]);
+  $majmin_menu->save();
+
+
+
+  ////// About //////
+  $about_node = Node::create([
+      'type' => 'page',
+      'title' => 'About Your Department'
+    ]);
+  $about_node->set('body', ['value'=>'<h3>Example of an About page from Chemistry</h3><p>The Department of Chemistry at Lehigh University provides a unique and exciting program of study for both graduate and undergraduate students. We offer Bachelor of Science, Bachelor of Arts, Masters of Science and Doctor of Philosophy degrees in Chemistry and a Bachelor of Science degree in Biochemistry (interdisciplinary).</p>
+  <p>Our program is designed to provide students with a broad background in chemistry while simultaneously offering opportunities to explore cutting-edge, multidisciplinary research problems. Research opportunities are available in areas such as materials chemistry, biological chemistry, surface chemistry and nanoscience and technology, along with traditional disciplines of analytical, inorganic, organic and physical chemistry.</p>',
+                  'format'=>'full_html',]);
+    //set the user as admin, just for these initial pages.
+  $about_node->setOwnerId(1);
+  $about_node->enforceIsNew();
+  $about_node->save();
+  //add the page to the menu
+  $about_menu = MenuLinkContent::create([
+    'title' => 'About',
+    'link' => ['uri' => 'entity:node/'.$about_node->id()],
+    'menu_name' => 'main',
+    'expanded' => TRUE,
+  ]);
+  $about_menu->save();
+  /// top menu
+  $about_menu = MenuLinkContent::create([
+    'title' => 'About',
+    'link' => ['uri' => 'internal:/node/'.$about_node->id()],
+    'menu_name' => 'top',
+    'expanded' => TRUE,
+  ]);
+  $about_menu->save();
+
+
+  /////////////////////////////////////////////
+  //
+  //  Footer block and menu content
+  //
+  ////////////////////////////////////////////
+
+  ////// contact block //////
+  $addr_block_content = BlockContent::create([
+    'type' => 'contact_block',
+    'info' => 'Footer Address',
+  ]);
+  $addr_block_content-> set('field_address',[
+  'country_code' => 'US',
+  'administrative_area' => 'PA',
+  'locality' => 'Bethlehem',
+  'postal_code' => '18015',
+  'address_line1' => '27 Memorial Drive West',
+  ]);
+  $addr_block_content->set('field_email',['value'=>'incas@lehigh.edu']);
+  $addr_block_content->set('field_telephone',['value'=>'(610) 758-3000']);
+
+  $addr_block_content->save();
+
+  $addr_block = Block::create([
+      'id'=> 'footeraddress',
+      'plugin' => 'block_content:'.$addr_block_content->uuid(),
+      'theme' => 'cas_base',
+      'region' => 'footer',
+      'weight' => -5,
+  ]);
+  $addr_block->save();
+
+  ////// social media menu //////
+
+  ///// facebook ////
+  $face_social = MenuLinkContent::create([
+    'title' => 'Facebook',
+    'link' => ['uri' => 'https://facebook.com'],
+    'menu_name' => 'social-media',
+    'description'=>'Facebook Link',
+    'expanded' => FALSE,
+  ]);
+  $face_social->save();
+
+  //// twitter ////
+  $twit_social = MenuLinkContent::create([
+    'title' => 'Twitter',
+    'link' => ['uri' => 'https://twitter.com'],
+    'menu_name' => 'social-media',
+    'description'=> 'Twitter Link',
+    'expanded' => FALSE,
+  ]);
+  $twit_social->save();
+
+  //// instagram ////
+  $insta_social = MenuLinkContent::create([
+    'title' => 'Instagram',
+    'link' => ['uri' => 'https://instagram.com'],
+    'menu_name' => 'social-media',
+    'description' => 'Instagram Link',
+    'expanded' => FALSE,
+  ]);
+  $insta_social->save();
+
+  //// Youtube Menu Item ////
+  $youtb_social = MenuLinkContent::create([
+    'title' => 'YouTube',
+    'link' => ['uri' => 'https://youtube.com'],
+    'menu_name' => 'social-media',
+    'description'=>'Youtube Link',
+    'expanded' => FALSE,
+  ]);
+  $youtb_social->save();
+
+}

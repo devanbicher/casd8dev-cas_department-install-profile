@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_callout_accent_color
+    - paragraphs.paragraphs_type.callouts
+id: paragraph.callouts.field_callout_accent_color
+field_name: field_callout_accent_color
+entity_type: paragraph
+bundle: callouts
+label: 'Callout Accent Color'
+description: 'We should add a piece of advice or way to identify what their accent color is. '
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Use Accent Color'
+  off_label: 'No Accent Color'
+field_type: boolean

@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: contact_block
+label: 'Contact Block'
+revision: 0
+description: 'Block housing contact information: phone, email, etc'

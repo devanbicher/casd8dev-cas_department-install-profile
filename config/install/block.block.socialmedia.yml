@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.social-media
+  module:
+    - menu_block
+  theme:
+    - layout_theme
+id: socialmedia
+theme: layout_theme
+region: footer
+weight: -4
+provider: null
+plugin: 'menu_block:social-media'
+settings:
+  id: 'menu_block:social-media'
+  label: 'Follow Us on Social'
+  provider: menu_block
+  label_display: visible
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand: false
+  parent: 'social-media:'
+  suggestion: social_media_footer
+visibility: {  }

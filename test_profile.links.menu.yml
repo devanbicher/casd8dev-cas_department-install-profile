@@ -1,0 +1,4 @@
+test_profile.front_page:
+  title: 'Home - Disable Later'
+  route_name: '<front>'
+  menu_name: main

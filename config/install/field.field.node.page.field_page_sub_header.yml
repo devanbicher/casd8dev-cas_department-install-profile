@@ -1,0 +1,21 @@
+uuid: 75911d0e-edd8-4c88-a1d7-ef57f8194864
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_sub_header
+    - node.type.page
+id: node.page.field_page_sub_header
+field_name: field_page_sub_header
+entity_type: node
+bundle: page
+label: 'Page Sub Header'
+description: 'This will show up as the header underneath the main page header with the breadcrumb, above the text'
+required: false
+translatable: false
+default_value:
+  -
+    value: Overview
+default_value_callback: ''
+settings: {  }
+field_type: string

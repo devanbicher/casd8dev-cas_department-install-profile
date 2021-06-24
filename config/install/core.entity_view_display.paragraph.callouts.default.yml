@@ -1,0 +1,103 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.callouts.field_callout_accent_color
+    - field.field.paragraph.callouts.field_callout_block_deco
+    - field.field.paragraph.callouts.field_callout_body
+    - field.field.paragraph.callouts.field_callout_color_scheme
+    - field.field.paragraph.callouts.field_callout_image
+    - field.field.paragraph.callouts.field_callout_image_location
+    - field.field.paragraph.callouts.field_callout_link
+    - field.field.paragraph.callouts.field_callout_link_decoration
+    - field.field.paragraph.callouts.field_callout_title
+    - paragraphs.paragraphs_type.callouts
+  module:
+    - link
+    - options
+id: paragraph.callouts.default
+targetEntityType: paragraph
+bundle: callouts
+mode: default
+content:
+  field_callout_accent_color:
+    type: boolean
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  field_callout_block_deco:
+    type: list_default
+    weight: 5
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_callout_body:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_callout_color_scheme:
+    type: boolean
+    weight: 6
+    region: content
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  field_callout_image:
+    type: entity_reference_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_callout_image_location:
+    type: list_default
+    weight: 7
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_callout_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_callout_link_decoration:
+    type: boolean
+    weight: 8
+    region: content
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  field_callout_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

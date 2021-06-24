@@ -1,0 +1,49 @@
+uuid: 038e3154-2922-4079-853a-48d1b6211606
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_block
+    - field.field.block_content.contact_block.body
+    - field.field.block_content.contact_block.field_address
+    - field.field.block_content.contact_block.field_email
+    - field.field.block_content.contact_block.field_telephone
+  module:
+    - address
+    - telephone
+    - text
+id: block_content.contact_block.default
+targetEntityType: block_content
+bundle: contact_block
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_address:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: address_plain
+    region: content
+  field_email:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: email_mailto
+    region: content
+  field_telephone:
+    weight: 1
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+hidden: {  }

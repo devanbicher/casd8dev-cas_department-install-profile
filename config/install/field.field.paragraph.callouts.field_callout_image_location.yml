@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_callout_image_location
+    - paragraphs.paragraphs_type.callouts
+  module:
+    - options
+id: paragraph.callouts.field_callout_image_location
+field_name: field_callout_image_location
+entity_type: paragraph
+bundle: callouts
+label: 'Callout Image Location'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

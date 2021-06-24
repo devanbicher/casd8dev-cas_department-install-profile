@@ -1,0 +1,16 @@
+drupalAcctProvisionServer: nis_lehigh
+ldapEntryProvisionServer: null
+drupalAcctProvisionTriggers:
+  - drupal_on_login
+ldapEntryProvisionTriggers: {  }
+userUpdateCronQuery: none
+userUpdateCronInterval: daily
+orphanedDrupalAcctBehavior: user_cancel_block
+orphanedCheckQty: 100
+orphanedAccountCheckInterval: monthly
+userConflictResolve: resolve
+manualAccountConflict: conflict_associate
+acctCreation: user_settings_for_ldap
+ldapUserSyncMappings: {  }
+disableAdminPasswordField: true
+

@@ -1,0 +1,70 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+  module:
+    - ckeditor
+format: basic_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Underline
+            - Bold
+            - Italic
+            - Strike
+            - Superscript
+            - Subscript
+            - SpecialChar
+        -
+          name: Linking
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: 'Group formatting'
+          items:
+            - BulletedList
+            - NumberedList
+            - Blockquote
+            - HorizontalRule
+        -
+          name: Media
+          items:
+            - DrupalMediaLibrary
+        -
+          name: 'Block Formatting'
+          items:
+            - Format
+            - Styles
+        -
+          name: Flow
+          items:
+            - Undo
+            - Redo
+            - Maximize
+        -
+          name: extended
+          items:
+            - Cut
+            - Copy
+            - PasteFromWord
+            - PasteText
+  plugins:
+    language:
+      language_list: un
+    stylescombo:
+      styles: "p.special.alert|Alert\r\np.special.warning|Warning\r\np.special.footnote|Footnote"
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

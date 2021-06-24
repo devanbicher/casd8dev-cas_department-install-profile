@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: simple_body
+label: 'Simple Body'
+icon_default: null
+description: 'This is a simple body text field, works the same as the regular body field on all other content types.'
+behavior_plugins: {  }

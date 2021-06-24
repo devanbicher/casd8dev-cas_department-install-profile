@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: simple_text
+label: 'Simple Text'
+description: ''
+weight: -10

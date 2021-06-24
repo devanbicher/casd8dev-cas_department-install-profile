@@ -1,0 +1,29 @@
+uuid: f4998257-85ad-450a-83be-8f9362520469
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.top
+  module:
+    - menu_block
+  theme:
+    - layout_theme
+id: topnavigation
+theme: layout_theme
+region: header
+weight: -7
+provider: null
+plugin: 'menu_block:top'
+settings:
+  id: 'menu_block:top'
+  label: 'Top Navigation'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 1
+  expand: false
+  parent: 'top:'
+  suggestion: top
+visibility: {  }

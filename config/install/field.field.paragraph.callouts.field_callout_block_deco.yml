@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_callout_block_deco
+    - paragraphs.paragraphs_type.callouts
+  module:
+    - options
+id: paragraph.callouts.field_callout_block_deco
+field_name: field_callout_block_deco
+entity_type: paragraph
+bundle: callouts
+label: 'Callout Block Decoration'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: corner_lines
+default_value_callback: ''
+settings: {  }
+field_type: list_string

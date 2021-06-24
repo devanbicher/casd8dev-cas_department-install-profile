@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: aesthetic_enhancements
+label: 'Aesthetic Enhancements'
+description: ''
+weight: -10

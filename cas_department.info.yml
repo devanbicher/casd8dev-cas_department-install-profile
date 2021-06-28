@@ -79,6 +79,9 @@ install:
   - entity_browser
   - entity_embed
   - file_browser
+  - r4032login
+  - redirect
+  - redirect_404
   #not sure if these will stay in the final, non-development site deployment
   - config_update_ui
   - config_update

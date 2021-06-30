@@ -45,7 +45,7 @@ content:
       closed_mode_threshold: 3
       add_mode: modal
       form_display_mode: default
-      default_paragraph_type: callouts
+      default_paragraph_type: _none
       features:
         add_above: add_above
         collapse_edit_all: collapse_edit_all
@@ -59,7 +59,7 @@ content:
       paragraphs_ee:
         paragraphs_ee:
           dialog_style: tiles
-          easy_access_count: '1'
+          easy_access_count: '2'
           dialog_off_canvas: false
     region: content
   field_page_sub_header:

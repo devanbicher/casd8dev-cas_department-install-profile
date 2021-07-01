@@ -14,14 +14,11 @@ settings:
       value: corner_lines
       label: 'Corner Lines'
     -
-      value: corner_dots
-      label: 'Corner Dots'
+      value: corner_lines_accent
+      label: 'Corner Lines Accent Color'
     -
       value: square_dots
       label: 'Square Dots Outline'
-    -
-      value: circle_dots
-      label: 'Circular Dots Outline'
   allowed_values_function: ''
 module: options
 locked: false

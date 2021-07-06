@@ -82,6 +82,8 @@ install:
   - r4032login
   - redirect
   - redirect_404
+  - inline_entity_form
+  - disable_messages
   #not sure if these will stay in the final, non-development site deployment
   - config_update_ui
   - config_update

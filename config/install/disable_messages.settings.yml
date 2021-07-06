@@ -1,0 +1,11 @@
+disable_messages_enable: '1'
+disable_messages_filter_by_page: 1
+disable_messages_page_filter_paths: "admin/reports/dblog\r\nadmin/reports/updates\r\nadmin/reports/status"
+disable_messages_enable_debug: '1'
+disable_messages_debug_visible_div: '0'
+disable_messages_ignore_patterns: ".*There are security updates available for one or more of your modules or themes.*\r\n.*There is a security update available for your version of Drupal.*"
+disable_messages_exclude_users: ''
+disable_messages_ignore_case: '1'
+disable_messages_ignore_regex:
+  - '/^.*There are security updates available for one or more of your modules or themes.*$/i'
+  - '/^.*There is a security update available for your version of Drupal.*$/i'

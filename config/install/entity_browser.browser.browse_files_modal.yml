@@ -1,0 +1,58 @@
+langcode: und
+status: true
+dependencies:
+  config:
+    - media.type.image
+    - views.view.file_entity_browser
+  enforced:
+    module:
+      - file_browser
+  module:
+    - dropzonejs_eb_widget
+    - media
+    - views
+name: browse_files_modal
+label: 'Browser for files (modal)'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: 'Select files'
+  auto_open: false
+selection_display: multi_step_display
+selection_display_configuration:
+  entity_type: node
+  display: label
+  display_settings: {  }
+  select_text: 'Use selected'
+  selection_hidden: false
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  a4ad947c-9669-497c-9988-24351955a02f:
+    settings:
+      view: file_entity_browser
+      view_display: entity_browser_1
+      submit_text: 'Select entities'
+      auto_select: true
+    weight: 1
+    label: 'Files listing'
+    id: view
+  c71436e5-d103-4536-9c67-c4566c7852e8:
+    settings:
+      form_mode: default
+      media_type: image
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Drop files here to upload them'
+      max_filesize: 20M
+      extensions: 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp'
+      clientside_resize: false
+      resize_width: null
+      resize_height: null
+      resize_quality: !!float 1
+      resize_method: contain
+      thumbnail_method: contain
+      submit_text: 'Select entities'
+    weight: 3
+    label: 'Media Upload'
+    id: dropzonejs_media_entity_inline_entity_form

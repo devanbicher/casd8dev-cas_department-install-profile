@@ -111,30 +111,31 @@ $cah213 ->save();
     'type' => 'page',
     'title' => 'Welcome to Your New Website'
   ]);
-  $welcome->set('body', ['value'=>'<p>People read websites differently than print. Your guests will read only about 20 percent of the content on your pages. They are scanning your pages, looking for information quickly, so here are some tips as you build your pages to engage your audience.
-
+  $welcome->set('body', ['value'=>'<p>People read websites differently than print. Your guests will read only about 20 percent of the content on your pages. They are scanning your pages, looking for information quickly, so here are some tips as you build your pages to engage your audience.</p>
+  <p>  
   Be concise and write simply
   Keep text short and sweet. Do not say in 150 words what could be said in 75.
-  
+  <br>
   Write simply
   Long complex sentences that could otherwise be described in a more straightforward manner are best avoided. Use simple sentences.
-  
+  <br>
   Use keywords
   Use terms that are commonly used to describe your topic. Avoid using proprietary terms and abbreviations as much as is possible.
-  
+  <br>
   Use headings
   Break up your text with brief but descriptive headings and subheadings so users can find information faster.
   See this page LINK for examples of headings and available font styles for your website
-  
+  <br>
   Take a hint from journalism
   Put the essential and most interesting information at the beginning. Include additional information in order of decreasing importance.
-  
+  <br>
   Break up paragraphs into different ideas
   Long blocks of text are intimidating to readers. Several short paragraphs are preferable to a single long paragraph.
-  
+  <br>
   Make your text skim-friendly
   Use bulleted lists in place of long series or text lists.
-  
+  </P>
+  <p>
   CAS Web guidelines and policies can be found at:
   https://confluence.cc.lehigh.edu/display/CASDEAN/Welcome+to+the+College+of+Arts+and+Sciences </p>
  

@@ -6,7 +6,7 @@ dependencies:
 id: basic_page_menu_path
 label: 'Basic page menu path'
 type: 'canonical_entities:node'
-pattern: '[node:menu-link:parents:join-path]/[node:title]'
+pattern: '[node:menu-link:parents:join-path]/[node:menu-link:title]'
 selection_criteria:
   2d94c8a6-2319-4849-854e-414e8144756a:
     id: node_type

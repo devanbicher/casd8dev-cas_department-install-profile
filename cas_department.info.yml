@@ -85,6 +85,7 @@ install:
   - inline_entity_form
   - disable_messages
   - action
+  # custom modules we (or WMS) built
   #not sure if these will stay in the final, non-development site deployment
   - config_update_ui
   - config_update

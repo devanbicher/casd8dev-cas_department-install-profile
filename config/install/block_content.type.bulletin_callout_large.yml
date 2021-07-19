@@ -4,4 +4,4 @@ dependencies: {  }
 id: bulletin_callout_large
 label: 'Bulletin Callout Large'
 revision: 0
-description: ''
+description: 'Decorated link with additional text to an internal or external page. Full Width Image'

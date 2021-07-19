@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:bulletin_callout_large:9aec77c5-8eae-4c59-a4f3-dac07274495f'
+  module:
+    - block_content
+  theme:
+    - cas_base
+id: bulletincalloutlargetest
+theme: cas_base
+region: bulletin
+weight: 0
+provider: null
+plugin: 'block_content:9aec77c5-8eae-4c59-a4f3-dac07274495f'
+settings:
+  id: 'block_content:9aec77c5-8eae-4c59-a4f3-dac07274495f'
+  label: 'Bulletin Callout Large Test'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

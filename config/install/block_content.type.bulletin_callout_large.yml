@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: bulletin_callout_large
+label: 'Bulletin Callout Large'
+revision: 0
+description: ''

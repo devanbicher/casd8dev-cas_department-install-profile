@@ -231,7 +231,7 @@ $cah213 ->save();
   $maj_min->save();
   //place the page in a menu
   $majmin_menu = MenuLinkContent::create([
-    'title' => 'Majors & Minors',
+    'title' => 'Majors and Minors',
     'link' => ['uri' => 'entity:node/'.$maj_min->id()],
     'menu_name' => 'main',
     'expanded' => TRUE,

@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: apply_now
+label: 'Apply Now'
+revision: 1
+description: 'Custom Block type for apply now content.  Should be placed above the menu on the left sidebar.'

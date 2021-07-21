@@ -6,7 +6,6 @@ dependencies:
     - entity_browser.browser.browse_files_modal
     - field.field.block_content.apply_now.field_image
     - field.field.block_content.apply_now.field_link
-    - field.field.block_content.apply_now.field_plain_long_text
     - field.field.block_content.apply_now.field_title
   module:
     - entity_browser
@@ -38,14 +37,6 @@ content:
       placeholder_title: 'Apply Now'
     third_party_settings: {  }
     type: link_default
-    region: content
-  field_plain_long_text:
-    weight: 3
-    settings:
-      rows: 4
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
     region: content
   field_title:
     weight: 2

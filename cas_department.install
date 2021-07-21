@@ -108,7 +108,7 @@ $cah213 ->save();
     'shortcut_set' => 'default',
     'title' => t('Add Custom block'),
     'weight' => -18,
-    'link' => ['uri' => 'internal:block/add'],
+    'link' => ['uri' => 'internal:/block/add'],
   ]);
   $shortcut->save();
 

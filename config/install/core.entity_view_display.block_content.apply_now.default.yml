@@ -3,26 +3,33 @@ status: true
 dependencies:
   config:
     - block_content.type.apply_now
+    - field.field.block_content.apply_now.body
     - field.field.block_content.apply_now.field_image
     - field.field.block_content.apply_now.field_link
     - field.field.block_content.apply_now.field_title
-    - image.style.large
   module:
     - link
-    - media
+    - text
 id: block_content.apply_now.default
 targetEntityType: block_content
 bundle: apply_now
 mode: default
 content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_image:
-    type: media_thumbnail
     weight: 0
     label: hidden
     settings:
-      image_style: large
-      image_link: ''
+      view_mode: default
+      link: false
     third_party_settings: {  }
+    type: entity_reference_entity_view
     region: content
   field_link:
     weight: 3

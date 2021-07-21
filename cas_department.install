@@ -123,7 +123,7 @@ $cah213 ->save();
     'type' => 'page',
     'title' => 'Welcome to Your New Website'
   ]);
-  $welcome->set('body', ['value'=>'<h2> List any important notes below</h2><p>People read websites differently than print. Your guests will read only about 20 percent of the content on your pages. They are scanning your pages, looking for information quickly, so here are some tips as you build your pages to engage your audience.</p>
+  $welcome->set('body', ['value'=>'<h2> LOCAL INSTALL TEST <br> if this is here, then installation from a local folder worked.</h2><p>People read websites differently than print. Your guests will read only about 20 percent of the content on your pages. They are scanning your pages, looking for information quickly, so here are some tips as you build your pages to engage your audience.</p>
   <p>  
   <b>Be concise and write simply</b> <br>
   Keep text short and sweet. Do not say in 150 words what could be said in 75.

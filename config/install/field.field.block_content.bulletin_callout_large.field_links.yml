@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.bulletin_callout_large
+    - field.storage.block_content.field_links
+  module:
+    - link
+id: block_content.bulletin_callout_large.field_links
+field_name: field_links
+entity_type: block_content
+bundle: bulletin_callout_large
+label: Links
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

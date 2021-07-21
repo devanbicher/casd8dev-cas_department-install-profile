@@ -1,0 +1,78 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.bulletin_callout_large
+    - field.field.block_content.bulletin_callout_large.body
+    - field.field.block_content.bulletin_callout_large.field_image
+    - field.field.block_content.bulletin_callout_large.field_links
+    - field.field.block_content.bulletin_callout_large.field_title
+  module:
+    - field_group
+    - link
+    - media
+    - text
+third_party_settings:
+  field_group:
+    group_text:
+      children:
+        - field_title
+        - body
+        - field_links
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: text-group
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Text
+id: block_content.bulletin_callout_large.default
+targetEntityType: block_content
+bundle: bulletin_callout_large
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_image:
+    type: media_thumbnail
+    weight: 5
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+  field_links:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_title:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

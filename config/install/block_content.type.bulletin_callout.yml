@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: bulletin_callout
+label: 'Bulletin Callout'
+revision: 0
+description: 'Decorated link with additional text to an internal or external page.'

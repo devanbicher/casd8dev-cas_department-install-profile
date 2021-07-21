@@ -104,6 +104,14 @@ $cah213 ->save();
   ]);
   $shortcut->save();
 
+  $shortcut = Shortcut::create([
+    'shortcut_set' => 'default',
+    'title' => t('Add Custom block'),
+    'weight' => -18,
+    'link' => ['uri' => 'internal:block/add'],
+  ]);
+  $shortcut->save();
+
   /////////////////////////////////////////////
   //
   //  CREATE STANDARD BASIC PAGES and put them in the menus

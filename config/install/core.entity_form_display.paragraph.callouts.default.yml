@@ -3,9 +3,9 @@ status: true
 dependencies:
   config:
     - entity_browser.browser.browse_files_modal
-    - field.field.paragraph.callouts.field_callout_accent_color
+    - field.field.paragraph.callouts.field_accent
     - field.field.paragraph.callouts.field_callout_block_deco
-    - field.field.paragraph.callouts.field_callout_body
+    - field.field.paragraph.callouts.field_body_plain
     - field.field.paragraph.callouts.field_callout_color_scheme
     - field.field.paragraph.callouts.field_callout_image
     - field.field.paragraph.callouts.field_callout_image_location
@@ -50,7 +50,7 @@ third_party_settings:
     group_callout_deco:
       children:
         - field_callout_color_scheme
-        - field_callout_accent_color
+        - field_accent
         - field_callout_block_deco
       parent_name: ''
       weight: 5
@@ -67,7 +67,7 @@ targetEntityType: paragraph
 bundle: callouts
 mode: default
 content:
-  field_callout_accent_color:
+  field_accent:
     weight: 6
     settings:
       display_label: false
@@ -80,7 +80,7 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
-  field_callout_body:
+  field_body_plain:
     weight: 1
     settings:
       rows: 5

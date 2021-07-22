@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.callouts.field_callout_accent_color
+    - field.field.paragraph.callouts.field_accent
     - field.field.paragraph.callouts.field_callout_block_deco
-    - field.field.paragraph.callouts.field_callout_body
+    - field.field.paragraph.callouts.field_body_plain
     - field.field.paragraph.callouts.field_callout_color_scheme
     - field.field.paragraph.callouts.field_callout_image
     - field.field.paragraph.callouts.field_callout_image_location
@@ -20,7 +20,7 @@ targetEntityType: paragraph
 bundle: callouts
 mode: default
 content:
-  field_callout_accent_color:
+  field_accent:
     type: boolean
     weight: 4
     region: content
@@ -37,7 +37,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-  field_callout_body:
+  field_body_plain:
     weight: 1
     label: hidden
     settings: {  }

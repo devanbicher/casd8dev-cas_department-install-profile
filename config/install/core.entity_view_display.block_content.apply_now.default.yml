@@ -1,0 +1,54 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.apply_now
+    - field.field.block_content.apply_now.body
+    - field.field.block_content.apply_now.field_image
+    - field.field.block_content.apply_now.field_link
+    - field.field.block_content.apply_now.field_title
+  module:
+    - link
+    - text
+id: block_content.apply_now.default
+targetEntityType: block_content
+bundle: apply_now
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

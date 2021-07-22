@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: apply_now
+label: 'Apply Now'
+revision: 1
+description: 'A simple block for adding apply now text and links'

@@ -3,20 +3,20 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_accent
-    - paragraphs.paragraphs_type.callouts
-id: paragraph.callouts.field_accent
+    - paragraphs.paragraphs_type.link_list
+id: paragraph.link_list.field_accent
 field_name: field_accent
 entity_type: paragraph
-bundle: callouts
-label: 'Callout Accent Color'
+bundle: link_list
+label: 'Border Pattern Accent Color'
 description: 'Adds your accent color to parts of the paragraph'
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 0
 default_value_callback: ''
 settings:
   on_label: 'Use Accent Color'
-  off_label: 'No Accent Color'
+  off_label: 'Use Default Color'
 field_type: boolean

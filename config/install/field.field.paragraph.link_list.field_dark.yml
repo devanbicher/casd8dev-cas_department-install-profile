@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dark
+    - paragraphs.paragraphs_type.link_list
+id: paragraph.link_list.field_dark
+field_name: field_dark
+entity_type: paragraph
+bundle: link_list
+label: 'Link List Color Scheme'
+description: 'Use an inverted dark scheme on this paragraph item.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Dark
+  off_label: Default
+field_type: boolean

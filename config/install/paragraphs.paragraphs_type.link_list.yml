@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories: {  }
+id: link_list
+label: 'Link List'
+icon_default: null
+description: 'A list of links in two-column format.'
+behavior_plugins: {  }

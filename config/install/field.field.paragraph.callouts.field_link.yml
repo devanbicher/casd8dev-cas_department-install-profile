@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_callout_link
+    - field.storage.paragraph.field_link
     - paragraphs.paragraphs_type.callouts
   module:
     - link
-id: paragraph.callouts.field_callout_link
-field_name: field_callout_link
+id: paragraph.callouts.field_link
+field_name: field_link
 entity_type: paragraph
 bundle: callouts
 label: 'Callout Link'

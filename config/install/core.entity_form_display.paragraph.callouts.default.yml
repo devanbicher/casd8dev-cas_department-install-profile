@@ -6,12 +6,12 @@ dependencies:
     - field.field.paragraph.callouts.field_accent
     - field.field.paragraph.callouts.field_callout_block_deco
     - field.field.paragraph.callouts.field_body_plain
-    - field.field.paragraph.callouts.field_callout_color_scheme
-    - field.field.paragraph.callouts.field_callout_image
-    - field.field.paragraph.callouts.field_callout_image_location
-    - field.field.paragraph.callouts.field_callout_link
-    - field.field.paragraph.callouts.field_callout_link_decoration
-    - field.field.paragraph.callouts.field_callout_title
+    - field.field.paragraph.callouts.field_dark
+    - field.field.paragraph.callouts.field_image
+    - field.field.paragraph.callouts.field_image_location
+    - field.field.paragraph.callouts.field_link
+    - field.field.paragraph.callouts.field_link_decoration
+    - field.field.paragraph.callouts.field_title
     - paragraphs.paragraphs_type.callouts
   module:
     - entity_browser
@@ -21,8 +21,8 @@ third_party_settings:
   field_group:
     group_image:
       children:
-        - field_callout_image
-        - field_callout_image_location
+        - field_image
+        - field_image_location
       parent_name: ''
       weight: 4
       format_type: fieldset
@@ -35,8 +35,8 @@ third_party_settings:
       label: Image
     group_link:
       children:
-        - field_callout_link
-        - field_callout_link_decoration
+        - field_link
+        - field_link_decoration
       parent_name: ''
       weight: 2
       format_type: fieldset
@@ -49,7 +49,7 @@ third_party_settings:
       label: Link
     group_callout_deco:
       children:
-        - field_callout_color_scheme
+        - field_dark
         - field_accent
         - field_callout_block_deco
       parent_name: ''
@@ -88,14 +88,14 @@ content:
     third_party_settings: {  }
     type: string_textarea
     region: content
-  field_callout_color_scheme:
+  field_dark:
     weight: 5
     settings:
       display_label: false
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
-  field_callout_image:
+  field_image:
     type: entity_browser_entity_reference
     weight: 3
     settings:
@@ -109,13 +109,13 @@ content:
       field_widget_display_settings: {  }
     third_party_settings: {  }
     region: content
-  field_callout_image_location:
+  field_image_location:
     weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
-  field_callout_link:
+  field_link:
     weight: 4
     settings:
       placeholder_url: ''
@@ -123,14 +123,14 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
-  field_callout_link_decoration:
+  field_link_decoration:
     weight: 5
     settings:
       display_label: false
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
-  field_callout_title:
+  field_title:
     weight: 0
     settings:
       size: 60

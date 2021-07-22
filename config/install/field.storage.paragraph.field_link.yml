@@ -2,13 +2,14 @@ langcode: en
 status: true
 dependencies:
   module:
+    - link
     - paragraphs
-id: paragraph.field_callout_link_decoration
-field_name: field_callout_link_decoration
+id: paragraph.field_link
+field_name: field_link
 entity_type: paragraph
-type: boolean
+type: link
 settings: {  }
-module: core
+module: link
 locked: false
 cardinality: 1
 translatable: true

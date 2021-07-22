@@ -2,12 +2,14 @@ langcode: en
 status: true
 dependencies:
   module:
+    - media
     - paragraphs
-id: paragraph.field_callout_color_scheme
-field_name: field_callout_color_scheme
+id: paragraph.field_image
+field_name: field_image
 entity_type: paragraph
-type: boolean
-settings: {  }
+type: entity_reference
+settings:
+  target_type: media
 module: core
 locked: false
 cardinality: 1

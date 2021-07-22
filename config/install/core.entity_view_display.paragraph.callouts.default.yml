@@ -5,12 +5,12 @@ dependencies:
     - field.field.paragraph.callouts.field_accent
     - field.field.paragraph.callouts.field_callout_block_deco
     - field.field.paragraph.callouts.field_body_plain
-    - field.field.paragraph.callouts.field_callout_color_scheme
-    - field.field.paragraph.callouts.field_callout_image
-    - field.field.paragraph.callouts.field_callout_image_location
-    - field.field.paragraph.callouts.field_callout_link
-    - field.field.paragraph.callouts.field_callout_link_decoration
-    - field.field.paragraph.callouts.field_callout_title
+    - field.field.paragraph.callouts.field_dark
+    - field.field.paragraph.callouts.field_image
+    - field.field.paragraph.callouts.field_image_location
+    - field.field.paragraph.callouts.field_link
+    - field.field.paragraph.callouts.field_link_decoration
+    - field.field.paragraph.callouts.field_title
     - paragraphs.paragraphs_type.callouts
   module:
     - link
@@ -44,7 +44,7 @@ content:
     third_party_settings: {  }
     type: basic_string
     region: content
-  field_callout_color_scheme:
+  field_dark:
     type: boolean
     weight: 6
     region: content
@@ -54,7 +54,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-  field_callout_image:
+  field_image:
     type: entity_reference_entity_view
     weight: 3
     label: hidden
@@ -63,14 +63,14 @@ content:
       link: false
     third_party_settings: {  }
     region: content
-  field_callout_image_location:
+  field_image_location:
     type: list_default
     weight: 7
     region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
-  field_callout_link:
+  field_link:
     weight: 2
     label: hidden
     settings:
@@ -82,7 +82,7 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_callout_link_decoration:
+  field_link_decoration:
     type: boolean
     weight: 8
     region: content
@@ -92,7 +92,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-  field_callout_title:
+  field_title:
     weight: 0
     label: hidden
     settings:

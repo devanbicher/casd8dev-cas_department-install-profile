@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_callout_color_scheme
+    - field.storage.paragraph.field_dark
     - paragraphs.paragraphs_type.callouts
-id: paragraph.callouts.field_callout_color_scheme
-field_name: field_callout_color_scheme
+id: paragraph.callouts.field_dark
+field_name: field_dark
 entity_type: paragraph
 bundle: callouts
 label: 'Callout Color Scheme'

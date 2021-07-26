@@ -17,14 +17,14 @@ content:
   field_accent:
     weight: 3
     settings:
-      display_label: true
+      display_label: false
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_dark:
     weight: 2
     settings:
-      display_label: true
+      display_label: false
     third_party_settings: {  }
     type: boolean_checkbox
     region: content

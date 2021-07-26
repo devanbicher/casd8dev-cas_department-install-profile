@@ -9,7 +9,7 @@ field_name: field_accent
 entity_type: paragraph
 bundle: link_list
 label: 'Border Pattern Accent Color'
-description: 'Adds your accent color to parts of the paragraph'
+description: 'Adds your accent color to the border pattern of the paragraph'
 required: false
 translatable: true
 default_value:
@@ -17,6 +17,6 @@ default_value:
     value: 0
 default_value_callback: ''
 settings:
-  on_label: 'Use Accent Color'
+  on_label: 'Use Accent Color on Border'
   off_label: 'Use Default Color'
 field_type: boolean

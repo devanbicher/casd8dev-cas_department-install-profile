@@ -84,6 +84,7 @@ install:
   - redirect_404
   - inline_entity_form
   - disable_messages
+  - twig_extender
   # custom modules we (or WMS) built
   - path_fallback
   #not sure if these will stay in the final, non-development site deployment

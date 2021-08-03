@@ -59,6 +59,7 @@ install:
   - ldap_query
   - ldap_authentication
   - menu_item_extras
+  - backup_migrate
   #paragraphs
   - paragraphs
   - paragraphs_type_permissions
@@ -91,6 +92,7 @@ install:
   - config_update_ui
   - config_update
   # Development modules past here
+  - structure_sync
   - twig_vardumper
   - devel
 

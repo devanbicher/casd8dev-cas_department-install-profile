@@ -92,7 +92,6 @@ install:
   - config_update_ui
   - config_update
   # Development modules past here
-  - structure_sync
   - twig_vardumper
   - devel
 

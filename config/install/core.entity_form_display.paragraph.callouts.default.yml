@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.browse_files_modal
+    - entity_browser.browser.modal_media
     - field.field.paragraph.callouts.field_accent
-    - field.field.paragraph.callouts.field_callout_block_deco
     - field.field.paragraph.callouts.field_body_plain
+    - field.field.paragraph.callouts.field_callout_block_deco
     - field.field.paragraph.callouts.field_dark
     - field.field.paragraph.callouts.field_image
     - field.field.paragraph.callouts.field_image_location
@@ -74,12 +74,6 @@ content:
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
-  field_callout_block_deco:
-    weight: 7
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_body_plain:
     weight: 1
     settings:
@@ -87,6 +81,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
+  field_callout_block_deco:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_dark:
     weight: 5
@@ -99,14 +99,15 @@ content:
     type: entity_browser_entity_reference
     weight: 3
     settings:
-      entity_browser: browse_files_modal
-      field_widget_display: label
+      entity_browser: modal_media
+      field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: media_library
       field_widget_edit: true
       field_widget_remove: true
       open: true
       selection_mode: selection_append
       field_widget_replace: false
-      field_widget_display_settings: {  }
     third_party_settings: {  }
     region: content
   field_image_location:

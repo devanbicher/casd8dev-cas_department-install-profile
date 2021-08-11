@@ -17,8 +17,17 @@ settings:
       value: corner_lines_accent
       label: 'Corner Lines Accent Color'
     -
-      value: square_dots
-      label: 'Square Dots Outline'
+      value: corner_dots
+      label: 'Corner Dots'
+    -
+      value: corner_dots_accent
+      label: 'Corner Dots Accent Color'
+    -
+      value: dots_outline
+      label: 'Dots Outline'
+    -
+      value: dots_outline_accent
+      label: 'Dots Outline Accent Color'
   allowed_values_function: ''
 module: options
 locked: false

@@ -10,5 +10,5 @@ permissions:
   - 'search content'
   - 'view media'
   - 'view paragraph content callouts'
+  - 'view paragraph content link_list'
   - 'view paragraph content simple_body'
-

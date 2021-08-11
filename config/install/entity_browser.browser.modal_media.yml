@@ -32,7 +32,7 @@ widgets:
     id: view
   57867ec9-f601-47d3-835b-2284d9c1e481:
     settings:
-      form_mode: default
+      form_mode: media_library
       media_type: image
       upload_location: 'public://[date:custom:Y]-[date:custom:m]'
       dropzone_description: 'Drop files here to upload them'

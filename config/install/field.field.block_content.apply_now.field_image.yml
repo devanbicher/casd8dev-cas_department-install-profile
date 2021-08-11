@@ -10,7 +10,7 @@ field_name: field_image
 entity_type: block_content
 bundle: apply_now
 label: Image
-description: ''
+description: 'This image does not use a caption even if it has one.'
 required: false
 translatable: true
 default_value: {  }

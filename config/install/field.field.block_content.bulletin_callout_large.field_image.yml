@@ -10,7 +10,7 @@ field_name: field_image
 entity_type: block_content
 bundle: bulletin_callout_large
 label: Image
-description: ''
+description: 'This image does not use a caption even if it has one.'
 required: true
 translatable: false
 default_value: {  }

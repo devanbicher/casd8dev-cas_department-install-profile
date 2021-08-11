@@ -2,17 +2,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.bulletin_callout
-    - field.storage.block_content.field_image
+    - field.storage.node.field_hero_image
     - media.type.image
-id: block_content.bulletin_callout.field_image
-field_name: field_image
-entity_type: block_content
-bundle: bulletin_callout
-label: Image
-description: 'This image does not use a caption even if it has one.'
-required: true
-translatable: true
+    - node.type.page
+id: node.page.field_hero_image
+field_name: field_hero_image
+entity_type: node
+bundle: page
+label: 'Hero Image'
+description: ''
+required: false
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

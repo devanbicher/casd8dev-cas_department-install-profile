@@ -10,7 +10,7 @@ field_name: field_image
 entity_type: paragraph
 bundle: callouts
 label: 'Callout Image'
-description: ''
+description: 'This image does not use a caption even if it has one.'
 required: false
 translatable: false
 default_value: {  }

@@ -33,8 +33,8 @@ widgets:
     settings:
       view: file_entity_browser
       view_display: entity_browser_1
-      submit_text: 'Select entities'
-      auto_select: true
+      submit_text: 'Select Files'
+      auto_select: null
     weight: 1
     label: 'Files listing'
     id: view

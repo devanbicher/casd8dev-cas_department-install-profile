@@ -169,7 +169,7 @@ $cah213 ->save();
     'type' => 'page',
     'title' => 'Graduate Page'
   ]);
-  $grad_node->set('body', ['value'=>'<h3>Here is some example text for a graduate page from EES.<h3> <p> The EES Department offers a graduate program linked to nationally prominent research in key areas of Earth & Environmental Science. Our internationally recognized faculty work closely with students on their research projects and offer engaging and cutting-edge graduate courses. Active research discussion groups, weekly departmental lunches and seminars, and an annual graduate student research symposium all facilitate broad discussion, collaboration, and a dynamic intellectual environment.</p>',
+  $grad_node->set('body', ['value'=>'<h3>Here is some example text for a graduate page from EES.</h3> <p> The EES Department offers a graduate program linked to nationally prominent research in key areas of Earth & Environmental Science. Our internationally recognized faculty work closely with students on their research projects and offer engaging and cutting-edge graduate courses. Active research discussion groups, weekly departmental lunches and seminars, and an annual graduate student research symposium all facilitate broad discussion, collaboration, and a dynamic intellectual environment.</p>',
                   'format'=>'basic_html',]);
   //set the user as admin, just for these initial pages.
   $grad_node->setOwnerId(1);

@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+id: image_upload
+label: 'Image Upload'
+media_types:
+  image: image
+  audio: 0
+  document: 0
+  remote_video: 0
+  video: 0
+show_alt: null
+show_title: null
+form_mode: default

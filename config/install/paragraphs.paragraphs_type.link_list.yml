@@ -5,7 +5,8 @@ dependencies:
     - paragraphs_ee
 third_party_settings:
   paragraphs_ee:
-    paragraphs_categories: {  }
+    paragraphs_categories:
+      simple_text: simple_text
 id: link_list
 label: 'Link List'
 icon_default: null

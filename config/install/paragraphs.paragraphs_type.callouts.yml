@@ -10,5 +10,5 @@ third_party_settings:
 id: callouts
 label: Callouts
 icon_default: null
-description: ''
+description: 'Stylized block of text, with optional title, image, link and text. Highly customizable block styles with several color options. '
 behavior_plugins: {  }

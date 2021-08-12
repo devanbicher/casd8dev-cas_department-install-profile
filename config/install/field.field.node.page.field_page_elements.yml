@@ -6,6 +6,7 @@ dependencies:
     - node.type.page
     - paragraphs.paragraphs_type.callouts
     - paragraphs.paragraphs_type.link_list
+    - paragraphs.paragraphs_type.pull_quote
     - paragraphs.paragraphs_type.simple_body
   module:
     - entity_reference_revisions
@@ -27,13 +28,23 @@ settings:
       simple_body: simple_body
       callouts: callouts
       link_list: link_list
+      pull_quote: pull_quote
     target_bundles_drag_drop:
+      attributed_person:
+        weight: 7
+        enabled: false
       callouts:
         enabled: true
         weight: 3
       link_list:
         enabled: true
         weight: 5
+      pull_quote:
+        enabled: true
+        weight: 10
+      quotee:
+        weight: 11
+        enabled: false
       simple_body:
         enabled: true
         weight: 2

@@ -7,8 +7,25 @@ dependencies:
     - field.field.paragraph.pull_quote.field_quotee
     - paragraphs.paragraphs_type.pull_quote
   module:
+    - field_group
     - paragraphs
     - text
+third_party_settings:
+  field_group:
+    group_quotee_information:
+      children:
+        - field_quotee
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Quotee Information'
 id: paragraph.pull_quote.default
 targetEntityType: paragraph
 bundle: pull_quote
@@ -25,14 +42,14 @@ content:
     type: text_textarea_with_summary
     region: content
   field_pull_quote_style:
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_quotee:
     type: entity_reference_paragraphs
-    weight: 1
+    weight: 2
     settings:
       title: Quotee
       title_plural: Quotees

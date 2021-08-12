@@ -94,6 +94,9 @@ install:
   # Development modules past here
   - twig_vardumper
   - devel
+  # Media bulk upload might be useful outside of just development if departments have media they want to add in bulk
+  - media_bulk_upload
+
 
 themes:
   - cas_base

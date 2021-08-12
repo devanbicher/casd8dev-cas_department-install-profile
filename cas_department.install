@@ -70,22 +70,22 @@ function cas_department_install() {
   $taw219->activate();
   $taw219 ->save();
 
-//might as well add Rob and Chris.
-$ron305 = User::create([
-  'name' => 'ron305',
-  'pass' => '',
-]);
-$ron305 ->roles[]='administrator';
-$ron305 ->activate();
-$ron305->save();
+  //might as well add Rob and Chris.
+  $ron305 = User::create([
+    'name' => 'ron305',
+    'pass' => '',
+  ]);
+  $ron305 ->roles[]='administrator';
+  $ron305 ->activate();
+  $ron305->save();
 
-$cah213 = User::create([
-  'name' => 'cah213',
-  'pass' => '',
-]);
-$cah213 ->roles[] = 'administrator';
-$cah213->activate();
-$cah213 ->save();
+  $cah213 = User::create([
+    'name' => 'cah213',
+    'pass' => '',
+  ]);
+  $cah213 ->roles[] = 'administrator';
+  $cah213->activate();
+  $cah213 ->save();
 
   // Populate the default shortcut set.
   $shortcut = Shortcut::create([
@@ -352,5 +352,18 @@ $cah213 ->save();
     'expanded' => FALSE,
   ]);
   $youtb_social->save();
+
+  //bulk update the url aliases for the nodes that were generated.
+  $entities = [];
+  // Load All nodes.
+  $result = \Drupal::entityQuery('node')->execute();
+  $entity_storage = \Drupal::entityTypeManager()->getStorage('node');
+  $entities = array_merge($entities, $entity_storage->loadMultiple($result));
+
+
+  // Update URL aliases.
+  foreach ($entities as $entity) {
+    \Drupal::service('pathauto.generator')->updateEntityAlias($entity, 'update');
+  }
 
 }

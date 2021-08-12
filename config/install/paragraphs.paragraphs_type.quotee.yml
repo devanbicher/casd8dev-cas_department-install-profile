@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories: {  }
+id: quotee
+label: Quotee
+icon_default: null
+description: 'A meta paragraph, for now, for use in other paragraphs so we only need to replace add in this reference field once'
+behavior_plugins: {  }

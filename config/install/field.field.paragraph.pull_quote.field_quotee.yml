@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_quotee
+    - paragraphs.paragraphs_type.pull_quote
+    - paragraphs.paragraphs_type.quotee
+  module:
+    - entity_reference_revisions
+id: paragraph.pull_quote.field_quotee
+field_name: field_quotee
+entity_type: paragraph
+bundle: pull_quote
+label: Quotee
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      quotee: quotee
+    target_bundles_drag_drop:
+      callouts:
+        weight: 7
+        enabled: false
+      link_list:
+        weight: 8
+        enabled: false
+      person_attribute:
+        weight: 9
+        enabled: false
+      pull_quote:
+        weight: 10
+        enabled: false
+      quotee:
+        enabled: true
+        weight: 11
+      simple_body:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

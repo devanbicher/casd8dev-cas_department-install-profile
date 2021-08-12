@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_pull_quote_style
+field_name: field_pull_quote_style
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: dark_border_left
+      label: 'Dark Text and Left Border, no Quote Icon'
+    -
+      value: quote_accent_dots
+      label: 'Grey Text and Top Bar, Accented Icon and Top Dots'
+    -
+      value: simple_all_grey
+      label: 'All Grey Text and Top Bar, No Dots'
+    -
+      value: simple_all_accent
+      label: 'All Accent Color Text and Top Bar, No Dots'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

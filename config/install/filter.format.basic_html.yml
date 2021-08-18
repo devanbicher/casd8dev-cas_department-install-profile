@@ -14,7 +14,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<a href hreflang name> <em> <strong> <cite> <blockquote cite> <ul type> <ol start type> <li> <dl> <dt> <dd> <h3> <h4> <h5> <h6> <br> <img src alt height width data-entity-type data-entity-uuid data-align data-caption> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt> <caption> <hr> <p class="special footnote warning alert"> <u> <s> <sup> <sub>'
+      allowed_html: '<a href hreflang name> <em> <strong> <b> <cite> <blockquote cite> <ul type> <ol start type> <li> <dl> <dt> <dd> <h3> <h4> <h5> <h6> <br> <img src alt height width data-entity-type data-entity-uuid data-align data-caption> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt> <caption> <hr> <p class="special footnote warning alert"> <u> <s> <sup> <sub>'
       filter_html_help: true
       filter_html_nofollow: false
   filter_align:

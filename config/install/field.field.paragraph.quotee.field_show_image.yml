@@ -9,7 +9,7 @@ field_name: field_show_image
 entity_type: paragraph
 bundle: quotee
 label: 'Show Image'
-description: 'Whether or not to show the Quotee image (only applicable for the profile reference)'
+description: "THIS MUST BE ENABLED ONE THE PROFILE AND REFERENCE IS SETUP.\r\nWhether or not to show the Quotee image (only applicable for the profile reference)"
 required: false
 translatable: false
 default_value:

@@ -2,21 +2,20 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.pull_quote.field_body
+    - field.field.paragraph.pull_quote.field_body_plain
     - field.field.paragraph.pull_quote.field_pull_quote_style
     - field.field.paragraph.pull_quote.field_quotee
     - paragraphs.paragraphs_type.pull_quote
   module:
     - field_group
     - paragraphs
-    - text
 third_party_settings:
   field_group:
     group_quotee_information:
       children:
         - field_quotee
       parent_name: ''
-      weight: 1
+      weight: 2
       format_type: fieldset
       region: content
       format_settings:
@@ -31,18 +30,16 @@ targetEntityType: paragraph
 bundle: pull_quote
 mode: default
 content:
-  field_body:
+  field_body_plain:
     weight: 0
     settings:
-      rows: 9
-      summary_rows: 3
+      rows: 5
       placeholder: ''
-      show_summary: false
     third_party_settings: {  }
-    type: text_textarea_with_summary
+    type: string_textarea
     region: content
   field_pull_quote_style:
-    weight: 3
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: options_select

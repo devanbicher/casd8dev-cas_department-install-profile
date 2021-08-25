@@ -6,23 +6,26 @@ dependencies:
     - field.field.paragraph.quotee.field_name
     - field.field.paragraph.quotee.field_organization
     - field.field.paragraph.quotee.field_show_image
+    - image.style.cropped_quotee_thumbnail
     - paragraphs.paragraphs_type.quotee
+  module:
+    - media
 id: paragraph.quotee.default
 targetEntityType: paragraph
 bundle: quotee
 mode: default
 content:
   field_image:
-    weight: 2
+    weight: 0
     label: hidden
     settings:
-      view_mode: default
-      link: false
+      image_style: cropped_quotee_thumbnail
+      image_link: ''
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    type: media_thumbnail
     region: content
   field_name:
-    weight: 3
+    weight: 1
     label: hidden
     settings:
       link_to_entity: false
@@ -30,21 +33,12 @@ content:
     type: string
     region: content
   field_organization:
-    weight: 4
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-  field_show_image:
-    weight: 5
-    label: hidden
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
-hidden: {  }
+hidden:
+  field_show_image: true

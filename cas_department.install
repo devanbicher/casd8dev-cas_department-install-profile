@@ -53,6 +53,15 @@ function cas_department_install() {
   $update_disable_messages->set('disable_messages_ignore_regex', array("/^.*There are security updates available for one or more of your modules or themes.*$/i" , '/^.*There is a security update available for your version of Drupal.*$/i'));
   $update_disable_messages->save(TRUE);
 
+  #update backup_migrate schedule for backing up with cron
+  $update_backup_migrate = \Drupal::configFactory()->getEditable('backup_migrate.backup_migrate_schedule.daily_schedule');
+  $update_backup_migrate->set('enabled', TRUE);
+  $update_backup_migrate->set('keep', 300);
+  $update_backup_migrate->set('period', 86400);
+  $update_backup_migrate->set('destination_id', 'private_files');
+  $update_backup_migrate->set('source_id', 'default_db');
+  $update_backup_migrate->save(TRUE);
+
   //add Devan and Travis
   $dlb213 = User::create([
     'name' => 'dlb213',

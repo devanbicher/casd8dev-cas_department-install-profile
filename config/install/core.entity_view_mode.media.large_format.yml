@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.large_format
+label: 'Large Format'
+targetEntityType: media
+cache: true

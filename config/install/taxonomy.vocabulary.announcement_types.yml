@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Announcement Types'
+vid: announcement_types
+description: 'Types for the Announcement Content Type'
+weight: 0

@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.linkit_result_thumbnail
+  module:
+    - file
+    - image
+    - node
+id: cas_default
+label: 'CAS Default'
+description: ''
+matchers:
+  74b76fdd-62b1-4508-b68b-064ad2527a31:
+    id: 'entity:node'
+    weight: 0
+    settings:
+      include_unpublished: false
+      metadata: 'by [node:author] on [node:created:medium]'
+      bundles: {  }
+      group_by_bundle: false
+      substitution_type: canonical
+      limit: 100
+  ec6c6c29-44f6-4fc9-94e2-70374c3d2a02:
+    id: 'entity:file'
+    weight: 0
+    settings:
+      file_extensions: ''
+      file_status: 1
+      images:
+        show_dimensions: false
+        show_thumbnail: true
+        thumbnail_image_style: linkit_result_thumbnail
+      substitution_type: file
+      metadata: ''
+      bundles: null
+      group_by_bundle: null
+      limit: 100
+  fd3719bb-8f97-4d64-946c-cbaf689011c9:
+    id: front_page
+    weight: 0
+    settings: {  }

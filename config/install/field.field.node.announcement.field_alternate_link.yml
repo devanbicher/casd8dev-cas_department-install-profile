@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alternate_link
+    - node.type.announcement
+  module:
+    - link
+id: node.announcement.field_alternate_link
+field_name: field_alternate_link
+entity_type: node
+bundle: announcement
+label: 'Alternate Link'
+description: 'Use this field if you want the content to link to a different page.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

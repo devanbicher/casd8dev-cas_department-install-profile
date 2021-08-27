@@ -1,0 +1,44 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.announcement.body
+    - field.field.node.announcement.field_alternate_link
+    - field.field.node.announcement.field_image
+    - field.field.node.announcement.field_type
+    - node.type.announcement
+  module:
+    - text
+    - user
+id: node.announcement.default
+targetEntityType: node
+bundle: announcement
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: large_format
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_type:
+    weight: 0
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  field_alternate_link: true
+  links: true

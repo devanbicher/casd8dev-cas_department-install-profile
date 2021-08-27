@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: announcement
+label: Announcement
+type: 'canonical_entities:node'
+pattern: 'announcements/[node:title]'
+selection_criteria:
+  0e093361-6bcf-48ec-9df3-68ec3e2b4295:
+    id: node_type
+    bundles:
+      announcement: announcement
+    negate: false
+    context_mapping:
+      node: node
+selection_logic: and
+weight: -5
+relationships: {  }

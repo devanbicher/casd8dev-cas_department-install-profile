@@ -56,6 +56,9 @@ settings:
             - PasteFromWord
             - PasteText
   plugins:
+    drupallink:
+      linkit_enabled: true
+      linkit_profile: cas_default
     language:
       language_list: un
     stylescombo:

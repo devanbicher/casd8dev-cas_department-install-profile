@@ -16,7 +16,10 @@ install:
   - history
   - block
   - breakpoint
+  #editor tools
   - ckeditor
+  - linkit
+  - editor_advanced_link
   - color
   - config
   - contextual

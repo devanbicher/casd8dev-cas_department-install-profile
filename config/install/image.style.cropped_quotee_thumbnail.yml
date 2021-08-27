@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies: {  }
+name: cropped_quotee_thumbnail
+label: 'Cropped Quotee Thumbnail'
+effects:
+  73abcd09-b9f3-49a9-960d-687f059e9f6d:
+    id: image_crop
+    weight: -9
+    data:
+      width: 80
+      height: 80
+      anchor: center-center
+  7ee9710a-6a0f-4982-8a35-e498c850232b:
+    id: image_resize
+    weight: -10
+    data:
+      width: 150
+      height: 150

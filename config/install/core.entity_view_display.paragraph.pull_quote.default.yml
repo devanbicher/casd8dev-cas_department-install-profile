@@ -2,25 +2,24 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.pull_quote.field_body
+    - field.field.paragraph.pull_quote.field_body_plain
     - field.field.paragraph.pull_quote.field_pull_quote_style
     - field.field.paragraph.pull_quote.field_quotee
     - paragraphs.paragraphs_type.pull_quote
   module:
     - entity_reference_revisions
     - options
-    - text
 id: paragraph.pull_quote.default
 targetEntityType: paragraph
 bundle: pull_quote
 mode: default
 content:
-  field_body:
+  field_body_plain:
     weight: 0
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    type: basic_string
     region: content
   field_pull_quote_style:
     weight: 2

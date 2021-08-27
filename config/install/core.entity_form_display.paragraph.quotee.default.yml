@@ -10,13 +10,47 @@ dependencies:
     - paragraphs.paragraphs_type.quotee
   module:
     - entity_browser
+    - field_group
+third_party_settings:
+  field_group:
+    group_non_internal_attribution:
+      children:
+        - field_name
+        - field_organization
+        - field_image
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: 'Attribute quote to a person or entity outside of the website'
+        required_fields: true
+      label: 'Non-Internal Attribution'
+    group_internal_profile_reference:
+      children:
+        - field_show_image
+      parent_name: ''
+      weight: 1
+      format_type: details
+      region: content
+      format_settings:
+        description: 'Use the fields here to reference a person from within the site. Usually this is a faculty or staff member'
+        required_fields: true
+        id: ''
+        classes: ''
+        show_empty_fields: false
+        open: false
+      label: 'Internal Profile Reference'
 id: paragraph.quotee.default
 targetEntityType: paragraph
 bundle: quotee
 mode: default
 content:
   field_image:
-    weight: 2
+    weight: 3
     settings:
       entity_browser: modal_media
       field_widget_display: rendered_entity
@@ -31,14 +65,6 @@ content:
     type: entity_browser_entity_reference
     region: content
   field_name:
-    weight: 0
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_organization:
     weight: 1
     settings:
       size: 60
@@ -46,8 +72,16 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_organization:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_show_image:
-    weight: 3
+    weight: 2
     settings:
       display_label: true
     third_party_settings: {  }

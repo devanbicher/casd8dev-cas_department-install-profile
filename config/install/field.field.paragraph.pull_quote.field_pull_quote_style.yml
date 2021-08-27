@@ -12,7 +12,7 @@ entity_type: paragraph
 bundle: pull_quote
 label: 'Pull Quote Style'
 description: ''
-required: false
+required: true
 translatable: false
 default_value:
   -

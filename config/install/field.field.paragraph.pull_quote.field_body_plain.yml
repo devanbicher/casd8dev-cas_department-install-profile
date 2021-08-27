@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body_plain
+    - paragraphs.paragraphs_type.pull_quote
+id: paragraph.pull_quote.field_body_plain
+field_name: field_body_plain
+entity_type: paragraph
+bundle: pull_quote
+label: Quote
+description: 'quote text is unformatted'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -13,6 +13,7 @@ use Drupal\menu_item_extras\Entity\MenuItemExtrasMenuLinkContent;
 use Drupal\block\Entity\Block;
 use Drupal\block_content\Entity\BlockContent;
 use Drupal\file\Entity\File;
+use Drupal\taxonomy\Entity\Term;
 
 /**
  * Implements hook_install().
@@ -287,6 +288,29 @@ function cas_department_install() {
   ]);
   $about_menu->save();
 
+  /////////////////////////////////////////////
+  //
+  //  Taxonomy Terms
+  //
+  ////////////////////////////////////////////
+
+  $announce_term = Term::create([
+    'vid' => 'announcement_types',
+    'name' => 'Announcement'
+  ]);
+  $announce_term->save();
+
+  $alert_term = Term::create([
+    'vid' => 'announcement_types',
+    'name' => 'Alert'
+  ]);
+  $alert_term->save();
+
+  $update_term = Term::create([
+    'vid' => 'announcement_types',
+    'name' => 'Update'
+  ]);
+  $update_term->save();
 
   /////////////////////////////////////////////
   //

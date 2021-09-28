@@ -89,6 +89,8 @@ install:
   - inline_entity_form
   - disable_messages
   - twig_extender
+  - tablefield
+  - responsive_tables_filter
   # custom modules we (or WMS) built
   - path_fallback
   #not sure if these will stay in the final, non-development site deployment

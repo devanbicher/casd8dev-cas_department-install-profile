@@ -8,6 +8,7 @@ dependencies:
     - paragraphs.paragraphs_type.link_list
     - paragraphs.paragraphs_type.pull_quote
     - paragraphs.paragraphs_type.simple_body
+    - paragraphs.paragraphs_type.table
   module:
     - entity_reference_revisions
 id: node.page.field_page_elements
@@ -29,6 +30,7 @@ settings:
       callouts: callouts
       link_list: link_list
       pull_quote: pull_quote
+      table: table
     target_bundles_drag_drop:
       attributed_person:
         weight: 7
@@ -48,4 +50,7 @@ settings:
       simple_body:
         enabled: true
         weight: 2
+      table:
+        enabled: true
+        weight: 14
 field_type: entity_reference_revisions

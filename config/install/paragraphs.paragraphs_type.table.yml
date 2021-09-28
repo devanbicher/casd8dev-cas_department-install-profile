@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories: {  }
+id: table
+label: Table
+icon_default: null
+description: 'Responsive Table Paragraph using Table Field'
+behavior_plugins: {  }

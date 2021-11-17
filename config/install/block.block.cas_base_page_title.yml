@@ -5,8 +5,8 @@ dependencies:
     - cas_base
 id: cas_base_page_title
 theme: cas_base
-region: banner
-weight: -8
+region: pre_content
+weight: -5
 provider: null
 plugin: page_title_block
 settings:

@@ -7,8 +7,8 @@ dependencies:
     - cas_base
 id: cas_base_breadcrumbs
 theme: cas_base
-region: banner
-weight: -7
+region: pre_content
+weight: -4
 provider: null
 plugin: system_breadcrumb_block
 settings:
@@ -16,7 +16,7 @@ settings:
   label: Breadcrumbs
   provider: system
   label_display: '0'
-visibility: 
+visibility:
   request_path:
     id: request_path
     pages: '<front>'

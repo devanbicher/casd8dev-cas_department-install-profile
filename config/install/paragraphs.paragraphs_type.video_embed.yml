@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories: {  }
+id: video_embed
+label: 'Video Embed'
+icon_default: null
+description: ''
+behavior_plugins: {  }

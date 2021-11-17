@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.pull_quote
     - paragraphs.paragraphs_type.simple_body
     - paragraphs.paragraphs_type.table
+    - paragraphs.paragraphs_type.video_embed
   module:
     - entity_reference_revisions
 id: node.page.field_page_elements
@@ -31,6 +32,7 @@ settings:
       link_list: link_list
       pull_quote: pull_quote
       table: table
+      video_embed: video_embed
     target_bundles_drag_drop:
       attributed_person:
         weight: 7
@@ -53,4 +55,7 @@ settings:
       table:
         enabled: true
         weight: 14
+      video_embed:
+        enabled: true
+        weight: 16
 field_type: entity_reference_revisions

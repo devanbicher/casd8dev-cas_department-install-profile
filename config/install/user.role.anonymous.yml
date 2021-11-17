@@ -16,3 +16,4 @@ permissions:
   - 'view paragraph content quotee'
   - 'view paragraph content simple_body'
   - 'view paragraph content table'
+  - 'view paragraph content video_embed'

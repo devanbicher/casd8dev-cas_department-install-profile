@@ -8,7 +8,7 @@ dependencies:
 id: cas_base_content
 theme: cas_base
 region: content
-weight: -3
+weight: -1
 provider: null
 plugin: system_main_block
 settings:
